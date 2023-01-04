@@ -15,7 +15,7 @@ const NoPage = () => {
 					The page you're looking for isn't available. Try searching
 					again or use the Go Back button below.
 				</p>
-				<NavLink to='/'> Go Back </NavLink>.
+				<NavLink to='/'> Go Back </NavLink>
 				<img
 					src={lost}
 					alt='404 You are lost'

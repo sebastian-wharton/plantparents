@@ -5,7 +5,7 @@ const Home = () => {
 			<h2>Asset Dump</h2>
 			<hr />
 			<h3>Styles</h3>
-			<div className='style-box'>
+			<div className='font-box'>
 				<h1>Title Font (h1)</h1>
 				<h2>Subtitle Font (h2)</h2>
 				<h3>Smaller Subtitle Font (h3)</h3>
@@ -21,17 +21,17 @@ const Home = () => {
 				</p>
 			</div>
 			<h3>Colors</h3>
-			<div className='style-box'>
+			<div className='color-box'>
 				<p>bg</p>
-				<div className='clr-box'></div>
+				<div className='box1'></div>
 				<p>green-light</p>
-				<div className='clr-box'></div>
+				<div className='box2'></div>
 				<p>green-dark</p>
-				<div className='clr-box'></div>
+				<div className='box3'></div>
 				<p>yellow-light</p>
-				<div className='clr-box'></div>
-				<p>yellow-light</p>
-				<div className='clr-box'></div>
+				<div className='box4'></div>
+				<p>yellow-dark</p>
+				<div className='box5'></div>
 			</div>
 		</>
 	);

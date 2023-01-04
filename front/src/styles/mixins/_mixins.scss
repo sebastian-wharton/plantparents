@@ -1,0 +1,42 @@
+@mixin flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Media Queries
+@mixin bp1 {
+	@media (min-width: $sm) {
+		@content;
+	}
+}
+@mixin bp2 {
+	@media (min-width: $md) {
+		@content;
+	}
+}
+@mixin bp3 {
+	@media (min-width: $lg) {
+		@content;
+	}
+}
+
+// Breakpoints
+$sm: 400px;
+$md: 700px;
+$lg: 960;
+
+// Colors
+$bg: #f2f2f2;
+$green-light: #045843;
+$green-dark: #12312a;
+$yellow-dark: #e39927;
+$yellow-light: #fdbb18;
+
+// Misc Variable Units
+$shadow: rgba(0, 0, 0, 0.1);
+$space: 1rem;
+$duration: 250ms;
+$ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$footer: 500px;

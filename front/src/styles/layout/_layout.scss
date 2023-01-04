@@ -1,0 +1,81 @@
+// Layout
+main {
+	background-color: $bg;
+	max-width: 100vw;
+	min-height: 100vh;
+	position: relative;
+	margin-top: 100px;
+}
+
+header {
+	@include flex;
+	justify-content: space-between;
+	background-color: $green-dark;
+	color: $yellow-light;
+	position: fixed;
+	top: 0px;
+	height: 100px;
+	width: 100%;
+}
+
+.logo {
+	display: flex;
+	align-self: center;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 10px;
+	position: absolute;
+	top: 20px;
+	left: 10px
+
+	NavLink {
+		margin: 5px;
+		position: absolute;
+		flex-grow: 1;
+		cursor: pointer;
+		position: relative;
+		color: $yellow-light;
+		left: 10px;
+		top: 10px;
+		text-decoration: none;
+		text-transform: lowercase;
+		text-shadow: $shadow 2px 2px;
+		transition: flex-grow $duration $ease;
+	}
+}
+
+footer {
+	background-color: $green-dark;
+	color: $yellow-light;
+	height: 500px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	word-wrap: break-word;
+}
+// @include flex;
+
+button {
+	border: none;
+	background-color: $yellow-light;
+	color: $green-dark;
+	&:hover {
+		background-color: $green-dark;
+		color: $yellow-light;
+	}
+}
+
+.page-wrap {
+	position: relative;
+	margin-bottom: $footer;
+	padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.nav-links > a:nth-child(1) {
+	margin: 10px;
+}
