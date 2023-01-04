@@ -1,7 +1,25 @@
-const Contact = () => {
+const Login = () => {
 	return (
 		<>
-			<h1>Contact Me</h1>{' '}
+			<div className='login-body'>
+				<section className='login'>
+					<h1>Login</h1>
+					<hr />
+					<label
+						htmlFor='Username'
+						placeholder='Username'
+					>
+						Username:{' '}
+					</label>
+					<input type='text' />
+				</section>
+				<section className='signup'></section>
+			</div>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+				rem corporis expedita maxime nisi dolorem cupiditate beatae,
+				quasi architecto nemo quis dolorum nihil quo cum.
+			</p>{' '}
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
 				molestiae necessitatibus, nam labore ipsa exercitationem. Non in
@@ -69,4 +87,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default Login;

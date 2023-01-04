@@ -1,7 +1,12 @@
-const Contact = () => {
+const Products = () => {
 	return (
 		<>
-			<h1>Contact Me</h1>{' '}
+			<h1>Products</h1>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+				rem corporis expedita maxime nisi dolorem cupiditate beatae,
+				quasi architecto nemo quis dolorum nihil quo cum.
+			</p>{' '}
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
 				molestiae necessitatibus, nam labore ipsa exercitationem. Non in
@@ -69,4 +74,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default Products;

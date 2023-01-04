@@ -1,40 +1,11 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import Store from './pages/Store';
-import Contact from './pages/Contact';
-import NoPage from './pages/NoPage';
-
-export default function App() {
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route
-					path='/'
-					element={<Layout />}
-				>
-					<Route
-						index
-						element={<Home />}
-					/>
-					<Route
-						path='store'
-						element={<Store />}
-					/>
-					<Route
-						path='contact'
-						element={<Contact />}
-					/>
-					<Route
-						path='*'
-						element={<NoPage />}
-					/>
-				</Route>
-			</Routes>
-		</BrowserRouter>
-	);
-}
+import './styles/index.css';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>
+);

@@ -1,27 +1,16 @@
-import { Outlet, Link } from 'react-router-dom';
-import Header from '../components/Header';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Layout = () => {
 	return (
 		<>
-			<Header />
-			<nav>
-				<ul>
-					<li>
-						<Link to='/'>Home</Link>
-					</li>
-					<li>
-						<Link to='/store'>Store</Link>
-					</li>
-					<li>
-						<Link to='/contact'>Contact</Link>
-					</li>
-				</ul>
-			</nav>
-
-			<Outlet />
-			<Footer />
+			<ScrollRestoration />
+			<main>
+				<Header />
+				<Outlet />
+				<Footer />
+			</main>
 		</>
 	);
 };

@@ -1,38 +1,60 @@
-import { Route, Routes, Link } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { Store } from './pages/Store';
-import { Contact } from './pages/Contact';
+import {
+	createBrowserRouter,
+	createRoutesFromElements,
+	Route,
+	RouterProvider,
+} from 'react-router-dom';
+import './styles/index.css';
 
-export function App() {
-	return (
-		<>
-			<nav>
-				<ul>
-					<li>
-						<Link to='/'>Home</Link>
-					</li>
-					<li>
-						<Link to='/contact'>Contact</Link>
-					</li>
-					<li>
-						<Link to='/store'>Store</Link>
-					</li>
-				</ul>
-			</nav>
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
-				/>
-				<Route
-					path='/contact'
-					element={<Contact />}
-				/>
-				<Route
-					path='/store'
-					element={<Store />}
-				/>
-			</Routes>
-		</>
-	);
+
+// Pages
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Login from './pages/Login';
+import Store from './pages/Store';
+import Products from './pages/Products';
+import NoPage from './pages/NoPage';
+
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route
+			path='/'
+			element={<Layout />}
+		>
+			<Route
+				index
+				element={<Home />}
+			/>
+			<Route
+				path='contact'
+				element={<Contact />}
+			/>
+			<Route
+				path='login'
+				element={<Login />}
+			/>
+			<Route
+				path='store'
+				element={<Store />}
+			/>
+			<Route
+				path='products'
+				element={<Products />}
+			/>
+			<Route
+				path='*'
+				element={<NoPage />}
+			/>
+		</Route>
+	)
+);
+
+function App() {
+	return <RouterProvider router={router} />;
 }
+
+export default App;
+
+
+
